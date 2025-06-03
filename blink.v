@@ -6,8 +6,8 @@ module Blink #(
     output reg [7:0] leds
 );
 
-localparam ONE_SECOND  = CLK_FREQ 9 / 10;
-localparam HALF_SECOND = CLK_FREQ 2 / 10;
+localparam ONE_SECOND  = CLK_FREQ * 9 / 10;
+localparam HALF_SECOND = CLK_FREQ * 2 / 10;
 
 reg [31:0] counter;
 reg state_on; 
