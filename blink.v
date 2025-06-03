@@ -18,7 +18,7 @@ always @(posedge clk ) begin
     end else begin
         if (counter >= HALF_SECOND - 1) begin
             counter <= 32'h0;
-            leds <= (leds == 8'b10000000) ? 8'b00000001 : leds << 1;
+            leds <= leds ^ 8'b01010101;
         end else begin
             counter <= counter + 1;
         end
